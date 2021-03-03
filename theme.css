@@ -95,11 +95,12 @@
   /* 阴影 */
   --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
+  --b3-dialog-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 	/*目录分隔阴影*/
   --AOD-toolbar-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
 	/*代码块颜色边界*/
-  --AOD-card-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  --AOD-card-shadow: 0px 0px 10px rgba(0,0,0, 0.5);
+  
   /* --AOD-card-shadow:var(--b3-dialog-shadow); */
 
   /* diff */
@@ -167,8 +168,11 @@
   --b3-vditor-inline-mark-color: #e8eaed;
   --b3-vditor-inline-tag-color: #9aa0a6;
   --b3-vditor-inline-blockref-color: var(--AOD-vditor-inline-blockref-color);
-  --AOD-vditor-inline-link-color: #AE8ABE;
+  --AOD-vditor-inline-link-color: #6897BB;
   --AOD-vditor-inline-blockref-color: #6897BB;
+  
+  /*命名与别名(需要在设置中勾选显示别名)*/
+  --b3-vditor-ir--tip:#A8C023;
 }
 
 .language-graphviz polygon {
@@ -375,7 +379,8 @@
   background-color: var(--b3-vditor-task-background);
   margin-top: -0.3rem;
   margin-left: -0.1rem;
-  box-shadow: var(--AOD-card-shadow);
+  box-shadow: var(--b3-dialog-shadow);
+	/*var(--AOD-card-shadow);*/
 }
 
 /* 任务列表未选中，鼠标悬停 */
@@ -433,6 +438,11 @@
 /* 块引用内部锚文本颜色改变 */
 .vditor-ir__marker--info {
   color: var(--b3-vditor-inline-blockref-color) !important;
+}
+/*块链接*/
+.vditor-ir__blockref{
+  color: var(--b3-vditor-inline-blockref-color) !important;
+  border-bottom: 2px dashed var(--b3-vditor-inline-blockref-color); 
 }
 
 /* 块引用预览的样式 */
@@ -558,4 +568,9 @@ div[data-type="navigation"] .b3-list-item--focus,
 /* 页签选中时的背景颜色 */
 .item--focus {
   background-color: var(--AOD-theme-background) !important;
+}
+
+/*别名颜色*/
+.vditor-ir--tip *[tip]:not([fold="1"]):before{
+  color:var(--b3-vditor-ir--tip);
 }
