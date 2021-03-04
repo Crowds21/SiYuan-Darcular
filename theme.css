@@ -20,11 +20,18 @@
   --b3-theme-background: var(--AOD-theme-background);
   --b3-theme-surface: var(--AOD-theme-surface);
   --b3-theme-error: #d23f31;
+  
   /*文件树背景色*/
   --AOD-theme-surface: #313335;
   /*编辑器主体背景色*/
   --AOD-theme-background: #2b2b2b;
   --AOD-text-emphasize-color: #2b2b2b;
+  
+  /*背景图片,图片就放在Darcula主题目录下即可*/
+  --b3-theme-bg:url(eclipse.jpg);
+  /*图片上层背景色的透明度*/
+  --b3-theme-background : rgba(43,43,43,0.9);
+
 
   /* 文字颜色 */
   --b3-theme-on-primary: #fff;
@@ -180,6 +187,19 @@
 }
 
 /* 编辑器样式 */
+
+/*编辑区背景*/
+.vditor-content{
+	background-image:var(--b3-theme-bg);
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	/*var(--b3-theme-background);*/
+}
+/*编辑区背景上层*/
+.vditor-ir{
+	background-color: var(--b3-theme-background)!important;
+}
 
 /* 大纲样式 */
 .vditor-ir ul > li:not(.vditor-task) {
