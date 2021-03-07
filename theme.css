@@ -28,9 +28,9 @@
   --AOD-text-emphasize-color: #2b2b2b;
   
   /*背景图片,图片就放在Darcula主题目录下即可*/
-  --b3-theme-bg:url(eclipse.jpg);
+  --b3-theme-bg:url(darcula_bg.jpg);
   /*图片上层背景色的透明度*/
-  --b3-theme-background : rgba(43,43,43,0.9);
+  --b3-theme-background : rgba(43,43,43,0.92);
 
 
   /* 文字颜色 */
@@ -188,8 +188,9 @@
 
 /* 编辑器样式 */
 
+
 /*编辑区背景*/
-.vditor-content{
+.vditor-search +.vditor-content{
 	background-image:var(--b3-theme-bg);
 	background-position:center;
 	background-size:cover;
@@ -593,4 +594,10 @@ div[data-type="navigation"] .b3-list-item--focus,
 /*别名颜色*/
 .vditor-ir--tip *[tip]:not([fold="1"]):before{
   color:var(--b3-vditor-ir--tip);
+  background-color:null;
+}
+
+/*标题块*/
+.vditor-ir--tip *[tip]:not([fold="1"]){
+	box-shadow:none ;
 }
