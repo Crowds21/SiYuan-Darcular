@@ -24,6 +24,9 @@ Tips
 
 ## 更新
 
+#### v0.0.5
+- 压缩背景图片体积
+
 #### v0.0.4
 
 - 新增了一个可以更改壁纸背景的`shell` 脚本 `change_siyuan_bg.sh` .图片名称改为`darcula_bg.jpg`
